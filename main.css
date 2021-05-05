@@ -1,0 +1,154 @@
+body {
+	background-color: #090720;
+	text-align: center;
+	background-image: url(image/bg.jpg);
+	background-repeat: repeat-y;
+	margin: auto;
+	background-position: right;
+	color: #C2D9F5;
+	font-family: Harrington, Calligraph421 BT, Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+hr {
+	color: #725700;
+}
+a:link {
+	color: #DF7401;
+	text-decoration: none;
+}
+a:visited {
+    color: #725700;
+	text-decoration: none;
+}
+a:hover {
+	color: #FCE796;
+	text-decoration: none;
+}
+#header {
+	background-image: url(image/banner.jpg);
+	background-repeat: no-repeat;
+	height: 160px;
+}
+#header h1 {
+	margin: 0;
+}
+#container {
+	width: 800px;
+	height: auto;
+	text-align: left;
+	margin: auto;
+}
+#leftCol {
+	width: 140px;
+	float: left;
+	text-align: left;
+}
+#menu {
+	background-image: url(image/wand.gif);
+	background-repeat: no-repeat;
+	background-position: top left;
+	margin-top: 0;
+	padding-top: 40px; 
+	width: 140px;
+}
+#menu ul {
+	list-style: none;	
+}
+#menu ul li {
+	margin-bottom: 3px;
+	font-size: 20px;
+	font-weight: bolder;	
+	text-align: right;
+	text-indent: 0;
+	margin-left: 0;
+	
+}
+#menu ul li a {
+	color: #DF7401;
+	text-decoration: none;
+	text-align: right;
+	margin-right: 20px;
+}
+#menu ul li a:visited {
+    color: #725700;
+	text-decoration: none;
+}
+#menu ul li a:hover {
+	color: #FCE796;
+	text-decoration: none;
+}
+#content {
+	margin-left: 140px;
+	background-position: top right;
+	background-repeat: no-repeat;
+	font-size: small;
+}
+#content .block {
+	display:block; 
+	padding:10px; 
+	width:300px; 
+	text-align:justify; 
+	float:left; 
+}
+
+#content h3 {
+	color: #DEBF0C;
+	margin-top: 0;
+}
+
+#search {
+	width: 260px;
+	height: 25px;
+	float: right;
+	margin-top: 10px;
+}
+.news {
+	width: 130px;
+	background-color: #170F04;
+	color: #FCE796;
+	height: auto;
+	padding: 2px;
+	font-size: 12px;
+	border: 1px #ffffff dashed;
+}
+.news h3 {
+	color: white;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.top {
+	width: 620px;
+	text-align: justify;
+}
+#footer {
+	width: 100%;
+	color: white;
+	text-align: center;
+	font-size: 10px;
+	font-family: Harrington, Calligraph421 BT, Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+#footer hr {
+	clear: both;
+}
+#footer a {
+	color: #FA8B03;
+	text-decoration: none;
+}
+#footer a:visited {
+    color: #725700;
+	text-decoration: none;
+}
+#footer a:hover {
+	color: #FCE796;
+	text-decoration: none;
+}
+.float-right {
+	clear: right;
+	float: right;
+	margin: 0 3px 0 3px;
+}
+.float-left {
+	clear: left;
+	float: left;
+	margin: 0 3px 0 3px;
+}

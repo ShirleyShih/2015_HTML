@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>home</title>
+<style type="text/css">
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0;padding:0}
+fieldset,img{border:0}
+:focus{outline:0}
+address,caption,cite,code,dfn,em,strong,th,var,optgroup{font-style:normal;font-weight:normal}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}
+abbr,acronym{border:0;font-variant:normal}
+input,button,textarea,select,optgroup,option{font-family:inherit;font-size:inherit;font-style:inherit;font-weight:inherit}
+code,kbd,samp,tt{font-size:100%}
+input,button,textarea,select{*font-size:100%}
+body{line-height:1.5}
+ol,ul{list-style:none}
+table{border-collapse:collapse;border-spacing:0}
+caption,th{text-align:left}sup,sub{font-size:100%;vertical-align:baseline}
+:link,:visited,ins{text-decoration:none}
+blockquote,q{quotes:none}
+blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+.clearfix{display:inline-block}
+*html .clearfix{height:1%}
+.clearfix{display:block}
+h1{display:none}
+a,a:link,a:visited{color:#333;text-decoration:none}
+a:hover{color:#f60;text-decoration:underline}
+body{font-size:12px;font-family:"Microsoft Yahei",Tahoma,"SimSun";color:#333;background:#090720}
+/* player */
+.player{width:659px;height:330px;overflow:hidden;margin:0 auto;position: relative;}
+.player ul{width:900px;margin:0 auto;position:relative}
+.player li{float:left;position:absolute;padding-bottom:43px;}
+#icon_left,#icon_right{background:url(images/icon_lr.gif) -7px 0 no-repeat;width:50px;height:70px;position:absolute;top:250px;left:0;cursor:pointer}
+#icon_right{left:940px;background-position:0 -76px}
+#icon_left:hover,#icon_right:hover{filter:alpha(opacity=70);opacity:.7}
+.player li h3{position:absolute;bottom:48px;text-align:center;filter:alpha(opacity=70);opacity:.7;background-color:#000;left:0}
+.player li h3 a:link,.player li h3 a:visited{color:#fff}
+.p1,.p7,.p1 img,.p7 img{width:130px;height:195px;overflow:hidden;}
+.p2,.p6,.p2 img,.p6 img{width:160px;height:240px;overflow:hidden;}
+.p3,.p5,.p3 img,.p5 img{width:180px;height:270px;overflow:hidden;}
+.p4,.p4 img{width:200px;height:300px;overflow:hidden;}
+.p1{left:20px;z-index:7;top:40px}
+.p1 h3,.p7 h3{padding:5px 0;font-size:13px;width:165px}
+.p2{left:89px;z-index:8;top:25px}
+.p2 h3,.p6 h3{padding:5px 0;font-size:15px;width:222px}
+.p3{left:158px;z-index:9;top:10px}
+.p3 h3,.p5 h3{padding:8px 0;font-size:18px;width:275px;bottom:8px}
+.p4{left:228px;z-index:10;cursor:pointer;}
+.p4 h3{padding-bottom:10px;padding-top:15px;font-size:22px;width:320px}
+.p5{left:322px;z-index:9;top:10px}
+.p6{left:416px;z-index:8;top:25px}
+.p7{left:510px;z-index:7;top:40px}
+</style>
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript">
+$(function(){					
+	// 图片放大缩小显示						
+	var b = $(".player ul>li").size();
+	
+	$("#icon_left").click(function(){
+		$(".player ul>li").each(function(){
+			var a = $(this).attr("class"),c = parseInt(a.charAt(1)) - 1;
+			c == 0 && (c = b);
+			$(this).removeClass(a).addClass("p" + c);
+		});
+	}),
+	$("#icon_right").click(function(){
+		$(".player ul>li").each(function(){
+			var a = $(this).attr("class");
+			c = parseInt(a.charAt(1)) + 1;
+			c > b && (c = 1);
+			$(this).removeClass(a).addClass("p" + c);
+		});
+	});
+	$(".player ul>li.p1,.player ul>li.p2,.player ul>li.p3").live("click",function(){
+		$("#icon_right").click();
+	}),
+	$(".player ul>li.p5,.player ul>li.p6,.player ul>li.p7").live("click",function(){
+		$("#icon_left").click();
+	}),
+	$(".player ul>li.p4").live('click',function(){
+		var url = $(this).find("a").attr("href");
+		window.open(url);return false;
+	});
+	// 自动滚动
+	setInterval(function(){
+		$("#icon_left").click();
+	}, 5000);
+		
+});
+</script>
+	
+</head>
+<body>
+	<div class="player">
+		<div id="icon_left"></div>
+		<div id="icon_right"></div>
+	  <div style="margin-top:10px">
+			<ul class="clearfix">
+				<li class="p1">
+					<img src="images/ep1.jpg" alt="哈利波特-神祕的魔法石" />
+				</li>
+				<li class="p2">
+					<img src="images/ep2.jpg" alt="哈利波特-消失的密室" />
+				</li>
+				<li class="p3">
+					<img src="images/ep3.jpg" alt="哈利波特-阿茲卡班的逃犯" />
+				</li>
+				<li class="p4">
+					<img src="images/ep4.jpg" alt="哈利波特-火盃的考驗" />
+				</li>
+				<li class="p5">
+					<img src="images/ep5.jpg" alt="哈利波特-鳳凰會的密令" />
+				</li>
+				<li class="p6">
+					<img src="images/ep6.jpg" alt="哈利波特-混血王子的背叛" />
+				</li>
+				<li class="p7">
+					<img src="images/ep7.jpg" alt="哈利波特－死神的聖物" />
+				</li>
+			</ul>
+		</div>
+	</div><!--player end-->
+
+<center><p><font color="#ffffff" face="微軟正黑體" size="4">99秒講完哈利波特七集</font></p></center>
+<center><p><embed src="video.mp4" loop="false" autostart="false" width="560" height="373"></p></center>
+</body>
+</html>
